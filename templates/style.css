@@ -68,3 +68,9 @@ body {
     color: #333;
     margin-top: 20px;
 }
+
+.main-container .btn:hover{
+    background-color: #399918;
+    transform: scale(1.05);
+    color: white;
+}
