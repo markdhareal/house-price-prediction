@@ -7,41 +7,41 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="/static/style.css">
 </head>
 <body>
 
     <div class="main-container">
-        <form action="#">
+        <form action="/predict" method="POST">
             <h1>USA House Price Prediction</h1>
 
             <div class="predicted-price">
-                <p>Price: </p>
+                <p>{{price_text}}</p>
             </div>
 
             <div class="input-box">
                 <label>Avg. Area Income</label><br>
-                <input type="text"  required />
+                <input type="text" name="avg_area_income" required />
             </div>
 
             <div class="input-box">
                 <label>Avg. Area House Age</label><br>
-                <input type="text"  required/>
+                <input type="text" name="avg_area_house_age" required/>
             </div>
 
             <div class="input-box">
                 <label>Avg. Area Number of Rooms</label><br>
-                <input type="text"  required/>
+                <input type="text" name="avg_area_num_rooms" required/>
             </div>
 
             <div class="input-box">
                 <label>Avg. Area Number of Bedrooms</label><br>
-                <input type="text"  required/>
+                <input type="text" name="avg_area_num_bedrooms" required/>
             </div>
 
             <div class="input-box">
                 <label>Area Population</label><br>
-                <input type="text" required/>
+                <input type="text" name="area_population" required/>
             </div>
 
             <button type="submit" class="btn">Predict</button>
